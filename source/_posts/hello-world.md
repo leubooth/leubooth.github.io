@@ -1,40 +1,21 @@
 ---
 title: Hello World
+date: 2016-06-06 06:06:06
+tags: 
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+----------
 
-### Create a new post
+    Debug.Log("Hello World!");
 
-``` bash
-$ hexo new "My New Post"
-```
+----------
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+终究还是没能给开篇想到更合适的标题。
 
-### Run server
+索性就用"Hello World"，
 
-``` bash
-$ hexo server
-```
+一来有博客初开之喜，
 
-More info: [Server](https://hexo.io/docs/server.html)
+二来是要时时告诫自己凡事莫轻浮，永远保持一颗新手的学习心态。
 
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
-
-### This is a new update
+博客用途：学习笔记，技术问题，生活杂谈
