@@ -4,8 +4,6 @@ date: 2016-6-15 12:45:35
 tags:
 ---
 
-<!-- more -->
-
 ## Unity-IPv6
 互联网通信协议第6版（英文：Internet Protocol version 6，缩写：IPv6）是互联网协议的最新版本，用于分组交换互联网络的网络层协议，旨在解决IPv4地址枯竭问题。
 
@@ -13,6 +11,8 @@ Apple最近宣布从2016年6月1日起所有的提交到App Store的应用必须
 Apple这项规定针对所有新提交的应用或对已提交应用的更新。
 
 本文旨在记录过渡时期Unity工程的IPv6兼容解决方法。
+
+<!-- more -->
 
 ## Unity && Socket
 
