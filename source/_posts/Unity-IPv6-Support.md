@@ -4,7 +4,7 @@ date: 2016-6-15 12:45:35
 tags:
 ---
 
-<-- !more -->
+<!-- more -->
 
 ## Unity-IPv6
 互联网通信协议第6版（英文：Internet Protocol version 6，缩写：IPv6）是互联网协议的最新版本，用于分组交换互联网络的网络层协议，旨在解决IPv4地址枯竭问题。
