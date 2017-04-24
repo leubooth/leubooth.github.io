@@ -1,4 +1,10 @@
-##0.开篇
+---
+title: Unity-Android
+date: 2017-04-24 17:00:00
+tags: 技术分享
+---
+
+### 0.开篇
 
 众所周知，Unity3D 是一个风靡全球的游戏引擎。
 
@@ -6,9 +12,7 @@
 
 Android 就是众多平台其中的一个。
 
-##1.Android
-
-### 安卓是什么
+### 1.安卓系统
 
 **Android，中文俗称安卓，是一个基于 Linux 内核的开放源代码移动操作系统。**
 
@@ -24,7 +28,7 @@ Android 一词最早出现于法国作家利尔亚当（Auguste Villiers de l'Is
 
 他将外表像人的机器人取名为 Android。
 
-###安卓系统
+- <https://w.magictavern.com/display/BAC/Android+Development+Basic?preview=/2886187/2886188/Android%20Learner.pptx>
 
 - Android 操作系统的核心属于 Linux 内核的一个分支，具有典型的 Linux 调度和功能，除此之外，Google 为了能让 Linux 在移动设备上良好的运行，对其进行了修改和扩充。
 
@@ -40,13 +44,10 @@ Android 一词最早出现于法国作家利尔亚当（Auguste Villiers de l'Is
 
 - 安卓开发的四大组件
 	- Activity
-	
 	- Service
-	
 	- Broadcast Receiver	
-	
 	- Content Provider 
-	- https://developer.android.com/guide/components/fundamentals.html#Components
+	- <https://developer.android.com/guide/components/fundamentals.html#Components>
 - 虽然 Android 操作系统中的应用程序大部分都是由 Java 编写的，但是 Android 却是以转换为 Dalvik executables（.dex） 的文件在 Dalvik 虚拟机上运行的。由于 Android 中并不自带 Java 虚拟机，因此无法直接运行 Java 程序。不过 Android 平台上提供了多个 Java 虚拟机供用户下载使用，安装了 Java 虚拟机的 Android 系统可以运行 Java_ME 的程序。5.0 版（Lolipop）开始以 Android Runtime（ART）取代 Dalvik 虚拟机。
 - Java 
 1990 oak oracle 
@@ -59,7 +60,7 @@ oracle 和 google 打官司
 - Android应用程序包 (英语：Android application package，APK) 是Android操作系统使用的一种应用程序包文件格式，用于分发和安装移动应用及中间件。一个Android应用程序的代码想要在Android设备上运行，必须先进行编译，然后被打包成为一个被Android系统所能识别的文件才可以被运行，而这种能被Android系统识别并运行的文件格式便是“APK”。 一个APK文件内包含被编译的代码文件(.dex 文件)，文件资源（resources）， assets，证书（certificates），和清单文件（manifest file）。APK 文件基于 ZIP 文件格式，它与JAR文件的构造方式相似。它的互联网媒体类型是application/vnd.android.package-archive.
 - asset 下存有 unity 导出后的大部分资源。
 
-##3.Unity 与 Android
+### 2.Android 在 Unity 中的应用场景
 
 	- unity 是如何编译成安卓工程或者apk的
 	- elipse 是什么
@@ -76,13 +77,21 @@ oracle 和 google 打官司
 			- Other Settings
 			- Publish Settings
 			- Keystore and Key alias
-			- bla bla bla 需要把剩下的都介绍一遍
 		- Preference
 			- SDK / JDK / NDK
 		- Editor Settings
 			- Unity Remote
 
-4.unity 与 Java 通信
+### 3.Unity 与 Java 通信
 
-5.如何编写中间件
+<https://docs.unity3d.com/Manual/PluginsForAndroid.html>
+
+### 4.如何编写中间件
+
+现状：当下很多第三方的 SDK 只有针对原生 Android 系统的组件包，并没有针对 Unity 的。而每次导出为 Google 工程实现接入又太耗费时间和精力，阻碍了自动化开发。所以有必要针对第三方组件，针对 Unity 编写中间组件，免去中间的接入步骤。
+
+- Jar
+- AAR
+- 导出 AAR
+- 
 		
