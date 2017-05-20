@@ -1,5 +1,5 @@
 ---
-title: Simply Brilliant Notes 极简主义读书笔记
+title: 笔记《Simply Brilliant》极简主义
 date: 2017-05-17 22:02:02
 tags: 读书笔记
 ---

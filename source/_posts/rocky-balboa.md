@@ -1,9 +1,17 @@
 ---
-title: Rocky 洛奇
-tags: 
+title: 摘录《Rocky》洛奇
+tags: 摘录
 ---
 
-{% asset_img 0.jpg Rocky Balboa %}
+{% asset_img 0.jpg Rocky%}
+
+<!-- more -->
+
+---
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=32431822&auto=0&height=66"></iframe>
+
+---
 
 **The world ain't all sunshine and rainbows**
 **It's a very mean and nasty place，**
