@@ -6,7 +6,7 @@ tags: 随便说说
 
 ---
 
-{% asset_img 0.jpg hello-world%}
+{% asset_img 0.jpg hello-world %}
 
 ---
 
