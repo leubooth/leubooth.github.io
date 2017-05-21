@@ -4,6 +4,12 @@ date: 2016-06-06 06:06:06
 tags: 随便说说
 ---
 
+---
+
+{% asset_img 0.jpg hello-world%}
+
+---
+
 终究还是没能为开篇想到更合适的标题，
 
 索性就用"Hello World"吧。

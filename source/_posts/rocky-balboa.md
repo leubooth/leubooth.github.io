@@ -3,7 +3,11 @@ title: 摘录《Rocky》洛奇
 tags: 摘录
 ---
 
+---
+
 {% asset_img 0.jpg Rocky%}
+
+---
 
 <!-- more -->
 
