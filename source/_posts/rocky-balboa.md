@@ -5,7 +5,7 @@ tags: 摘录
 
 ---
 
-{% asset_img 0.jpg Rocky%}
+{% asset_img 1.jpg Rocky%}
 
 ---
 
