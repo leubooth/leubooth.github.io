@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.2" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="技术分享," />
+
+
+<meta name="keywords" content="技术分享">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity &amp;&amp; Android &amp;&amp; SDK">
+<meta property="og:url" content="http://yoursite.com/unity-android-sdk/index.html">
+<meta property="og:site_name" content="leubooth">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/unity-android-sdk/0.jpg">
+<meta property="og:image" content="http://img.blog.csdn.net/20140311140541765">
+<meta property="og:image" content="http://images.cnitblog.com/i/480488/201407/211342070883976.jpg">
+<meta property="og:updated_time" content="2018-06-07T00:53:45.946Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity &amp;&amp; Android &amp;&amp; SDK">
+<meta name="twitter:image" content="http://yoursite.com/unity-android-sdk/0.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/unity-android-sdk/"/>
+
+
+  <title>Unity && Android && SDK | leubooth</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">leubooth</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Keep it simple, stupid.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/unity-android-sdk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leubooth">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="leubooth">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Unity && Android && SDK</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T17:00:00+00:00">2017-04-24</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<img src="/unity-android-sdk/0.jpg" title="unity-android-sdk">
+<hr>
+<a id="more"></a>
+<h2 id="0-开篇"><a href="#0-开篇" class="headerlink" title="0.开篇"></a>0.开篇</h2><!-- 抓耳挠腮图 -->
+<p>隔壁老王又在捶桌子了，抓耳挠腮，一副要把手里的谷歌亲儿子摔掉的架势。</p>
+<p>上前一问才知道，是因为用 Unity 接入安卓的 SDK 导致游戏包闪退，闪了一天了，还没找到问题。</p>
+<p>遇到这种情况也确实挺崩溃的，尤其是距离游戏更新的审判日没几天了。</p>
+<p>我决定帮老王解决这个问题。</p>
+<h2 id="1-安卓"><a href="#1-安卓" class="headerlink" title="1.安卓"></a>1.安卓</h2><h3 id="安卓系统的历史"><a href="#安卓系统的历史" class="headerlink" title="安卓系统的历史"></a>安卓系统的历史</h3><ul>
+<li><p><strong>Android，中文俗称安卓，是一个基于 Linux 内核的开放源代码移动操作系统。</strong>由 Google 成立的 Open Handset Alliance（OHA，开放手持设备联盟）持续领导与开发，主要设计用于触屏移动设备如智能手机和平板电脑与其他便携式设备。</p>
+</li>
+<li><p>Android 最初由安迪·鲁宾（Andy Rubin）等人开发制作，最初开发这个系统的目的是创建一个数码相机的先进操作系统；但是后来发现市场需求不够大，加上智能手机市场快速成长，于是 Android 被改造为一款面向智能手机的操作系统。</p>
+</li>
+<li><p>于2005年7月11日被美国科技企业 Google 收购。</p>
+</li>
+<li><p>2017年3月，Android 全球网络流量和设备超越 Microsoft Windows，正式成为全球第一大操作系统。</p>
+</li>
+</ul>
+<h3 id="安卓名称的由来"><a href="#安卓名称的由来" class="headerlink" title="安卓名称的由来"></a>安卓名称的由来</h3><ul>
+<li>Android 一词最早出现于法国作家利尔亚当（Auguste Villiers de l’Isle-Adam）在1886年发表的科幻小说《未来夏娃》（L’Ève future）中。他将外表像人的机器人取名为 Android。</li>
+</ul>
+<h3 id="安卓系统架构与设计"><a href="#安卓系统架构与设计" class="headerlink" title="安卓系统架构与设计"></a>安卓系统架构与设计</h3><ul>
+<li><p><strong>Android 操作系统的核心属于 Linux 内核的一个分支</strong>，具有典型的 Linux 调度和功能，除此之外，Google 为了能让 Linux 在移动设备上良好的运行，对其进行了修改和扩充。</p>
+</li>
+<li><p>安卓系统特性：显示布局，数据存储，网络，信息，语言，浏览器，Java，媒体支持，流媒体支持，硬件支持，多点触控，蓝牙，多任务处理，语音功能，无线共享功能，截图功能。</p>
+</li>
+<li><p>安卓系统架构分为四个层：</p>
+<ul>
+<li>最底层为 Linux 内核；</li>
+<li>第二层为库文件和安卓运行时环境；</li>
+<li>第三层为应用程序框架层；</li>
+<li>最上层为应用程序。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><img src="http://img.blog.csdn.net/20140311140541765" alt="image"></p>
+<p><img src="http://images.cnitblog.com/i/480488/201407/211342070883976.jpg" alt="image"></p>
+<hr>
+<ul>
+<li><p>虽然 Android 操作系统中的应用程序大部分都是由 Java 编写的，但是 Android 却是以转换为 Dalvik executables（.dex） 的文件在 Dalvik 虚拟机上运行的。由于 Android 中并不自带 Java 虚拟机，因此无法直接运行 Java 程序。不过 Android 平台上提供了多个 Java 虚拟机供用户下载使用，安装了 Java 虚拟机的 Android 系统可以运行 Java_ME 的程序。5.0 版（Lolipop）开始以 Android Runtime（ART）取代 Dalvik 虚拟机。</p>
+</li>
+<li><p>安卓开发的四大组件:</p>
+<ul>
+<li>Activity</li>
+<li>Service</li>
+<li>Broadcast Receiver</li>
+<li>Content Provider</li>
+</ul>
+</li>
+<li><p><a href="https://developer.android.com/guide/components/fundamentals.html#Components" target="_blank" rel="noopener">https://developer.android.com/guide/components/fundamentals.html#Components</a></p>
+</li>
+<li><p><a href="https://w.magictavern.com/display/BAC/Android+Development+Basic?preview=/2886187/2886188/Android%20Learner.pptx" target="_blank" rel="noopener">https://w.magictavern.com/display/BAC/Android+Development+Basic?preview=/2886187/2886188/Android%20Learner.pptx</a></p>
+</li>
+</ul>
+<h3 id="安卓与Java"><a href="#安卓与Java" class="headerlink" title="安卓与Java"></a>安卓与Java</h3><ul>
+<li><p>Java是一种广泛使用的计算机编程语言，拥有跨平台、面向对象、泛型编程的特性，广泛应用于企业级Web应用开发和移动应用开发。</p>
+</li>
+<li><p>任职于太阳微系统的詹姆斯·高斯林等人于1990年代初开发Java语言的雏形，最初被命名为Oak，目标设置在家用电器等小型系统的程序语言，应用在电视机、电话、闹钟、烤面包机等家用电器的控制和通信。由于这些智能化家电的市场需求没有预期的高，Sun公司放弃了该项计划。随着1990年代互联网的发展，Sun公司看见Oak在互联网上应用的前景，于是改造了Oak，于1995年5月以Java的名称正式发布。Java伴随着互联网的迅猛发展而发展，逐渐成为重要的网络编程语言。</p>
+</li>
+<li><p>与甲骨文公司的Java纠纷</p>
+</li>
+</ul>
+<p>关于甲骨文公司就Android所使用的开发语言平台Java为最引人关注的权利纠纷事件。<br>2010年8月，甲骨文公司就开始对Google无授权使用Java语言实现侵犯了公司的专利在美国加州北区地方法院提起控诉，要求高达90亿美元的赔偿，其中牵涉了原供职于Sun公司的Java开发人员在转职Google开发Android的Java实现使用了原公司的实现，API接口的实现是否具有专利版权性，Android的Java实现是否对甲骨文公司的Java移动平台系列产品做成冲击而形成不正当垄断等问题。<br>2012年5月的诉讼结果为陪审团支持Google的诉求，认为API只是系统或操作的方法，不受版权保护。<br>2012年10月甲骨文公司上诉，2014年5月，美国联邦巡回上诉法院认为API属于“计算机程序”仍受版权保护，判决Android侵犯了甲骨文公司Java的版权，但并不排除谷歌对其拥有合理使用性的权利。<br>2014年10月Google向美国最高法院申请调卷令，请求最高院介入。<br>2015年6月29日调卷令被拒绝，发往旧金山联邦法院进行审理。<br>2016年5月，旧金山联邦法院陪审团认定Android实现Java的API命名结构属于合理使用，不构成侵权，最终判Google胜诉。<br>2016年8月22日，Google在最新的Android 7.0 Nougat中，将专利的JDK替换成开源方案的OpenJDK，以彻底解决Java的专利问题。</p>
+<h3 id="安卓与系统版本命名"><a href="#安卓与系统版本命名" class="headerlink" title="安卓与系统版本命名"></a>安卓与系统版本命名</h3><ul>
+<li>安卓系统版本命名使用了从小到大的各种甜点。（4.0.3 Ice Cream Sandwich 冰淇淋三明治 API 15 97%+）</li>
+</ul>
+<h3 id="安卓与APK"><a href="#安卓与APK" class="headerlink" title="安卓与APK"></a>安卓与APK</h3><ul>
+<li><p>Android应用程序包 (英语：Android application package，APK) 是Android操作系统使用的一种应用程序包文件格式，用于分发和安装移动应用及中间件。一个Android应用程序的代码想要在Android设备上运行，必须先进行编译，然后被打包成为一个被Android系统所能识别的文件才可以被运行，而这种能被Android系统识别并运行的文件格式便是“APK”。 一个APK文件内包含被编译的代码文件(.dex 文件)，文件资源（resources）， assets，证书（certificates），和清单文件（manifest file）。APK 文件基于 ZIP 文件格式，它与JAR文件的构造方式相似。它的互联网媒体类型是application/vnd.android.package-archive.</p>
+</li>
+<li><p>Unity 导出APK后的大部分资源都在 asset 下。</p>
+</li>
+</ul>
+<h2 id="2-Unity-发布安卓-APK，都干了些什么"><a href="#2-Unity-发布安卓-APK，都干了些什么" class="headerlink" title="2.Unity 发布安卓 APK，都干了些什么"></a>2.Unity 发布安卓 APK，都干了些什么</h2><p>The Internal build system creates an APK by invoking Android SDK utilities in a specific order. Unity automatically performs a number of steps to create the APK, including:</p>
+<ul>
+<li>Preparing and building the Unity Assets</li>
+<li>Compiling scripts</li>
+<li>Processing the plug-ins</li>
+<li>Splitting the resources into the parts that go to the APK and the OBB, if Split Application Binary is selected</li>
+<li>Building the Android resources using the AAPT utility</li>
+<li>Generating the Android manifest and merging the library manifests into it</li>
+<li>Compiling the Java code into the Dalvik Executable format (DEX)</li>
+<li>Building the IL2CPP library, if IL2CPP Scripting Backend is selected</li>
+<li>Building and optimizing the APK and OBB packages</li>
+</ul>
+<p>Unity 会按照一定次序调用 Android SDK 命令行，构建 APK</p>
+<ul>
+<li>准备和构建 Unity 资源</li>
+<li>编译脚本</li>
+<li>处理插件</li>
+<li>如果勾选程序包分离，将资源分离到 APK 和 OBB 包</li>
+<li>使用AAPT工具构建安卓资源</li>
+<li>生成安卓配置清单文件，并将各类库的子配置清单合并到主配置清单中</li>
+<li>将 Java 代码编译为可执行的 .dex 文件</li>
+<li>如果勾选了 IL2CPP ，构建 ILCPP 类库</li>
+<li><p>构建和优化 APK 和 OBB 包</p>
+</li>
+<li><p><a href="https://docs.unity3d.com/Manual/android-BuildProcess.html" target="_blank" rel="noopener">https://docs.unity3d.com/Manual/android-BuildProcess.html</a></p>
+</li>
+</ul>
+<h2 id="3-Unity-编辑器中-Android-相关设置"><a href="#3-Unity-编辑器中-Android-相关设置" class="headerlink" title="3.Unity 编辑器中 Android 相关设置"></a>3.Unity 编辑器中 Android 相关设置</h2><ul>
+<li>Unity / Preferences / External Tools<ul>
+<li>Android SDK</li>
+<li>JDK</li>
+<li>NDK</li>
+</ul>
+</li>
+</ul>
+<!-- image here -->
+<ul>
+<li><p>File / Build Settings / Android</p>
+<ul>
+<li>Texture Compression<ul>
+<li><a href="https://docs.unity3d.com/Manual/class-TextureImporterOverride.html" target="_blank" rel="noopener">https://docs.unity3d.com/Manual/class-TextureImporterOverride.html</a></li>
+</ul>
+</li>
+<li>Build System<ul>
+<li>Internal</li>
+<li>Gradle</li>
+<li>ADT</li>
+</ul>
+</li>
+<li>Export Project</li>
+<li>Development Build</li>
+<li>Autoconnect Profiler</li>
+<li>Script Debugging</li>
+<li><p>Player settings</p>
+<ul>
+<li>Disable Depth and Stencil</li>
+<li>Other Settings<!-- image here --></li>
+<li>Publish Settings<ul>
+<li>Keystore and Key</li>
+<li>Split Application Binary</li>
+</ul>
+</li>
+</ul>
+<!-- image here -->
+</li>
+</ul>
+</li>
+<li><p>Edit / Project Settings / Editor / Unity Remote</p>
+<!-- image here -->
+</li>
+</ul>
+<h2 id="4-Unity-与-Java-通信"><a href="#4-Unity-与-Java-通信" class="headerlink" title="4.Unity 与 Java 通信"></a>4.Unity 与 Java 通信</h2><p><a href="https://docs.unity3d.com/Manual/PluginsForAndroid.html" target="_blank" rel="noopener">https://docs.unity3d.com/Manual/PluginsForAndroid.html</a></p>
+<h2 id="5-如何编写中间件"><a href="#5-如何编写中间件" class="headerlink" title="5.如何编写中间件"></a>5.如何编写中间件</h2><p>现状：当下很多第三方的 SDK 只有针对原生 Android 系统的组件包，并没有针对 Unity 的。而每次导出为 Google 工程实现接入又太耗费时间和精力，阻碍了自动化开发。所以有必要针对第三方组件，针对 Unity 编写中间组件，免去中间的接入步骤。</p>
+<ul>
+<li>Jar</li>
+<li>AAR</li>
+<li>导出 AAR</li>
+</ul>
+<h2 id="6-Unity-集成多个安卓-SDK"><a href="#6-Unity-集成多个安卓-SDK" class="headerlink" title="6.Unity 集成多个安卓 SDK"></a>6.Unity 集成多个安卓 SDK</h2><p>通常来讲，上线的项目在复杂的需求环境下可能需要接入若干第三方应用程序开发包，而这些开发包“们”在融合之初可能并不会预见到彼此会相遇。</p>
+<p>尤其在软硬件差异化如此巨大的安卓平台，一行配置冲突可能就会导致程序发布失败，甚至崩溃闪退。<br>再加上我们使用的 Unity 引擎开发游戏，又依赖 Unity 自动构建管线 （会自动构建 APK 包），并没有在 Android IDE 下集成开发的有利环境。</p>
+<p>现在主流的做法都是将中间件在 Android IDE 中完成封装，连同 SDK 一同导入到 Unity 编辑器中，最终编译到 APK 包中完成集成。</p>
+<p>这样做的好处有，中间件只需要编写一次，在下次更新中间件之前，都不需要再做其他额外的工作了。<br>弊端也就是在编写的时候，错误率高，容易造成一些未知的错误；有新的 SDK 集成进来之后可能会与老的中间件冲突，增加额外繁琐的工作量。</p>
+<p>当然，这些问题也是可以通过规范的流程很好的解决的。</p>
+<ul>
+<li><p>编写中间件</p>
+<ul>
+<li><p>重写 Application 入口类</p>
+<p>  遇到很多的情况是，一些 SDK 可能由于一些未知的原因，要求在应用的 Application 入口的 onCreate 生命周期里搞事情。</p>
+<p>  当然简单的做法就是写一个 Java 类继承自 Application 类，覆写 onCreate 方法，然后在应用程序的 AndroidManifest.xml 中 Application 节点中的 android:name 属性中填写这个类。<br>  应用启动后会第一时间执行 onCreate 方法体里的内容。</p>
+<p>  如果在一个工程中有多个 SDK 都需要覆写 Aplication 入口，那么有以下方法供选择：<br>  首选方案：编写订制通用 Application 入口类，将所有需要覆写的内容都写在这个类中。统一管理，修改方便。</p>
+<p>  次选方案：如果 Application 的入口已经被某 SDK 强行继承，并且封装成程序包不能做修改时。可以选择依次继承，A 继承 Application , B 继承 A 。AndroidManifest.xml  中的 android:name 填写最终的继承者 （B）。</p>
+</li>
+<li><p>重写 UnityPlayerActivity 入口类</p>
+<p>Unity 发布的应用到安卓的原理是，整个游戏内容作为安卓中的一个 Activity 存在。</p>
+<p>UnityPlayerActivity 继承自 Activity ，作为安卓程序启动后第一个被唤醒的入口 Activity。</p>
+<p>同样，很多 SDK 也需要在 Activity 被唤醒的时候执行一些逻辑，或者在这个 Activity 生命周期中的某个节点，响应某些操作。</p>
+<p>建议的做法和处理 Application 入口一样，可以选择编写统一的订制入口 Activity ，继承自 UnityPlayerActivity 类。或者采取依次继承的方法。</p>
+</li>
+<li><p>中间件类库模块化</p>
+<p>  在编写中间件类库的时候，可能需要注意的地方：</p>
+<p>  一般来讲，为了保证中间件能编译成功，会将一些其他引用到的类库导入到中间件工程中，但是我们往往不会把这些类也编译到中间件中。除非能够确定这些类不会在 Unity 工程中再出现一份，否则就会编译报错。</p>
+<p>  要尽量减少因为中间件包名或者类名的命名，给后来使用者带来的困惑。比如一个类 com.a.b.ClassC，发现使用的时候实现的是 D 功能。或者一个局域的包名，在实现全局的功能。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术分享/" rel="tag"># 技术分享</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/say-goodbye/" rel="next" title="告别">
+                <i class="fa fa-chevron-left"></i> 告别
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/simply-brilliant-note/" rel="prev" title="笔记《Simply Brilliant》极简主义">
+                笔记《Simply Brilliant》极简主义 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="leubooth" />
+            
+              <p class="site-author-name" itemprop="name">leubooth</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-开篇"><span class="nav-number">1.</span> <span class="nav-text">0.开篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安卓"><span class="nav-number">2.</span> <span class="nav-text">1.安卓</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓系统的历史"><span class="nav-number">2.1.</span> <span class="nav-text">安卓系统的历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓名称的由来"><span class="nav-number">2.2.</span> <span class="nav-text">安卓名称的由来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓系统架构与设计"><span class="nav-number">2.3.</span> <span class="nav-text">安卓系统架构与设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓与Java"><span class="nav-number">2.4.</span> <span class="nav-text">安卓与Java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓与系统版本命名"><span class="nav-number">2.5.</span> <span class="nav-text">安卓与系统版本命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓与APK"><span class="nav-number">2.6.</span> <span class="nav-text">安卓与APK</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Unity-发布安卓-APK，都干了些什么"><span class="nav-number">3.</span> <span class="nav-text">2.Unity 发布安卓 APK，都干了些什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Unity-编辑器中-Android-相关设置"><span class="nav-number">4.</span> <span class="nav-text">3.Unity 编辑器中 Android 相关设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Unity-与-Java-通信"><span class="nav-number">5.</span> <span class="nav-text">4.Unity 与 Java 通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-如何编写中间件"><span class="nav-number">6.</span> <span class="nav-text">5.如何编写中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Unity-集成多个安卓-SDK"><span class="nav-number">7.</span> <span class="nav-text">6.Unity 集成多个安卓 SDK</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">leubooth</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.2"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
